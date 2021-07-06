@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+<title>Calculator - A JavaScript Learning Project </title>
+<meta name="generator" content="Geany 1.37.1" />
+<link rel="stylesheet" href="main.css">
+<script type="text/javascript" src="scripts.js"></script> 
+</head>
+<body>
+<div class = "make-box">
+<h1>Calculator</h1>
+<nand>Enter value of A</nand> <input placeholder = "Number" type = "number" class = "form-inx" id = "a-input"><br>
+<nand>Enter value of B</nand> <input placeholder = "Number" type = "number" class = "form-inx" id = "b-input"><br><br>
+<button class = "add-button"> Add </button>
+<button class = "sub-button"> Subtract </button>
+<button class = "mul-button"> Multiply </button>
+<button class = "div-button"> Divide </button>
+
+<div class="result">
+    <h3>Answer :</h3>
+</div>
+<h5 id = "domdom">0.00</h5>
+</div>
+
+
+<script>    
+
+    const button1 = document.querySelector('.add-button')
+    button1.addEventListener('click',function(){
+        var a = parseInt(document.getElementById('a-input').value);
+        var b = parseInt(document.getElementById('b-input').value);
+        add(a,b);
+    })
+
+    const button2 = document.querySelector('.sub-button')
+    button2.addEventListener('click',function(){
+        var a = parseInt(document.getElementById('a-input').value);
+        var b = parseInt(document.getElementById('b-input').value);
+        subtract(a,b);
+    })
+
+    const button3 = document.querySelector('.mul-button')
+    button3.addEventListener('click',function(){
+        var a = parseInt(document.getElementById('a-input').value);
+        var b = parseInt(document.getElementById('b-input').value);
+        multiply(a,b);
+    })   
+
+    const button4 = document.querySelector('.div-button')
+    button4.addEventListener('click',function(){
+        var a = parseInt(document.getElementById('a-input').value);
+        var b = parseInt(document.getElementById('b-input').value);
+        divide(a,b);
+    }) 
+    </script>
+</body>
+</html>
